@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 Cursor cursor = bd.rawQuery("SELECT * FROM RANKING", null);
                 cursor.moveToFirst();
 
-                String inf = "";
+                String inf = "FECHA             \t TIEMPO\n";
                 if(cursor.moveToFirst() && cursor.getCount() >= 1){
                     do{
                         String id = cursor.getString(
@@ -814,6 +814,7 @@ public class MainActivity extends AppCompatActivity {
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
+            mostrarTodo();
 
         }
         if (grid[x][y] == 0) {
